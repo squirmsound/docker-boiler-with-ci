@@ -3,6 +3,17 @@ This is a quick  node.js app for the purposes of demonstrating a basic CI/CD wor
 * How To Use Docker With Continuous Integration
 * How To Build A DevOps Automated Workflow .
 
+## Technologies Used
+
+CircleCI
+* Hosted platform for automated testing
+
+DockerHub
+*
+
+github
+*
+
 ## Instructions  
 
 download or pull to your local computer
@@ -19,3 +30,22 @@ node .
 To View The Site go to:  
 **http://localhost:8080**
 
+### Add Docker Hub Trigger to CircleCI
+In Docker Hub -> Build Triggers -> Activate Triggers
+1. Copy Trigger URL
+2. Create curl command string
+
+In CircleCI -> Project Settings -> Environment Variables -> Add Variable
+Add corresponding values
+
+```
+Name: <trigger-name>
+Value: <curl-command>
+```
+
+Curl Command - <curl-command>
+
+```
+curl -H "Content-Type: application/json" --data '{"build":true}' -X POST https://registry.hub.docker.com/u/squirmlabs/docker-boiler-with-ci/trigger/c18247ed-8b16-4fcf-a494-35265bbf315c/
+```
+Single environment variable configured to set a post over https to DockerHub

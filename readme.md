@@ -49,3 +49,11 @@ Curl Command - <curl-command>
 curl -X POST https://registry.hub.docker.com/u/squirmlabs/docker-boiler-with-ci/trigger/c18247ed-8b16-4fcf-a494-35265bbf315c/
 ```
 Single environment variable configured to set a post over https to DockerHub
+
+
+## AWS VM
+Configure as one node cluster
+Configure a service to deploy our app into a single container
+
+## Configure Docker Cloud with AWS
+Somethings not working right?

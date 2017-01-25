@@ -47,6 +47,7 @@ Curl Command - <curl-command>
 
 ```
 curl -X POST https://registry.hub.docker.com/u/squirmlabs/docker-boiler-with-ci/trigger/c18247ed-8b16-4fcf-a494-35265bbf315c/
+curl -H 'content-Type:application/json' --data '{"build":true}' -X POST https://registry.hub.docker.com/u/squirmlabs/docker-boiler-with-ci/trigger/c18247ed-8b16-4fcf-a494-35265bbf315c/
 ```
 Single environment variable configured to set a post over https to DockerHub
 
